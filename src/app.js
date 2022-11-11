@@ -1,9 +1,33 @@
 import photographyList from "../data.js";
 
+function Gallery() {
+  let i = 0;
+
+  function handleNextimageClick() {
+    i = i + 1;
+  }
+
+  let photography = photographyList[i];
+
+  return (
+    <div>
+      <button onClick={handleNextimageClick}>Next</button>
+      <h2>
+        <i>{photography.photo_name} </i>by {photography.photographer}
+      </h2>
+      <h3>
+        ({i + 1} of {photographyList.length})
+      </h3>
+      <img src={photography.photoSrc} alt={photography.photoAlt} />
+      <p>{photography.photoDescription}</p>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="app">
-      <h1>Hello {photographyList[0].photographer}</h1>
+      <Gallery />
     </div>
   );
 }

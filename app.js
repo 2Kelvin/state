@@ -1,15 +1,57 @@
 import photographyList from "../data.js";
 
+function Gallery() {
+  var i = 0;
+
+  function handleNextimageClick() {
+    i = i + 1;
+  }
+
+  var photography = photographyList[i];
+
+  return React.createElement(
+    "div",
+    null,
+    React.createElement(
+      "button",
+      { onClick: handleNextimageClick },
+      "Next"
+    ),
+    React.createElement(
+      "h2",
+      null,
+      React.createElement(
+        "i",
+        null,
+        photography.photo_name,
+        " "
+      ),
+      "by ",
+      photography.photographer
+    ),
+    React.createElement(
+      "h3",
+      null,
+      "(",
+      i + 1,
+      " of ",
+      photographyList.length,
+      ")"
+    ),
+    React.createElement("img", { src: photography.photoSrc, alt: photography.photoAlt }),
+    React.createElement(
+      "p",
+      null,
+      photography.photoDescription
+    )
+  );
+}
+
 export default function App() {
   return React.createElement(
     "div",
     { className: "app" },
-    React.createElement(
-      "h1",
-      null,
-      "Hello ",
-      photographyList[0].photographer
-    )
+    React.createElement(Gallery, null)
   );
 }
 
