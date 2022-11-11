@@ -1,13 +1,13 @@
 import photographyList from "../data.js";
 
 function Gallery() {
-  let i = 0;
+  const [index, setIndex] = React.useState(0);
 
   function handleNextimageClick() {
-    i = i + 1;
+    setIndex(index++);
   }
 
-  let photography = photographyList[i];
+  let photography = photographyList[index];
 
   return (
     <div>
@@ -16,7 +16,7 @@ function Gallery() {
         <i>{photography.photo_name} </i>by {photography.photographer}
       </h2>
       <h3>
-        ({i + 1} of {photographyList.length})
+        ({index + 1} of {photographyList.length})
       </h3>
       <img src={photography.photoSrc} alt={photography.photoAlt} />
       <p>{photography.photoDescription}</p>
