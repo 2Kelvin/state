@@ -1,14 +1,14 @@
 const photographyList = [
   {
-    photo_name: "Cats In The Wild",
+    photoName: "Cats In The Wild",
     photoSrc: "images/cat.jpg",
     photoAlt: "cats",
     photoDescription:
-      "This amazing cats photo was taken on a sunny morning in December. The cats looked lonely and yearning for a photoshoot so I thought to myself, why not?",
+      "This amazing cat photo was taken on a sunny morning in December. My cat looked at me yearning for a photoshoot so I thought to myself, why not?",
     photographer: "Miranda",
   },
   {
-    photo_name: "Dogs The Royal Friends",
+    photoName: "Dogs The Royal Friends",
     photoSrc: "images/dog.jpg",
     photoAlt: "dogs",
     photoDescription:
@@ -16,11 +16,11 @@ const photographyList = [
     photographer: "Fer",
   },
   {
-    photo_name: "Nature My One And Only Love",
+    photoName: "Nature My One And Only Love",
     photoSrc: "images/nature.jpg",
     photoAlt: "nature",
     photoDescription:
-      "Nature, the first beauty the world was crowned with. from the landscapes to the waterfalls and oceans, it's all beautiful and thoughtfully created.",
+      "Nature, the first beauty the world was crowned with. From the landscapes to the waterfalls, oceans and forests, it's all beautiful and thoughtfully created.",
     photographer: "Kyle",
   },
 ];

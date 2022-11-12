@@ -16,7 +16,7 @@ function Gallery() {
 
   return React.createElement(
     "div",
-    null,
+    { className: "gallery" },
     React.createElement(
       "button",
       { onClick: handleNextimageClick },
@@ -28,7 +28,7 @@ function Gallery() {
       React.createElement(
         "i",
         null,
-        photography.photo_name,
+        photography.photoName,
         " "
       ),
       "by ",
@@ -37,11 +37,9 @@ function Gallery() {
     React.createElement(
       "h3",
       null,
-      "(",
       index + 1,
       " of ",
-      photographyList.length,
-      ")"
+      photographyList.length
     ),
     React.createElement("img", { src: photography.photoSrc, alt: photography.photoAlt }),
     React.createElement(

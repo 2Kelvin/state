@@ -4,19 +4,19 @@ function Gallery() {
   const [index, setIndex] = React.useState(0);
 
   function handleNextimageClick() {
-    setIndex(index++);
+    setIndex(index + 1);
   }
 
   let photography = photographyList[index];
 
   return (
-    <div>
+    <div className="gallery">
       <button onClick={handleNextimageClick}>Next</button>
       <h2>
-        <i>{photography.photo_name} </i>by {photography.photographer}
+        <i>{photography.photoName} </i>by {photography.photographer}
       </h2>
       <h3>
-        ({index + 1} of {photographyList.length})
+        {index + 1} of {photographyList.length}
       </h3>
       <img src={photography.photoSrc} alt={photography.photoAlt} />
       <p>{photography.photoDescription}</p>
