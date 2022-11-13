@@ -2,9 +2,13 @@ import photographyList from "../data.js";
 
 function Gallery() {
   const [index, setIndex] = React.useState(0);
+  const [showMore, setShowMore] = React.useState(false);
 
   function handleNextimageClick() {
     setIndex(index + 1);
+  }
+  function handleShowDetailsClick() {
+    setShowMore(!showMore);
   }
 
   let photography = photographyList[index];
@@ -18,8 +22,11 @@ function Gallery() {
       <h3>
         {index + 1} of {photographyList.length}
       </h3>
+      <button onClick={handleShowDetailsClick}>
+        {!showMore ? "Show Details" : "Hide Details"}
+      </button>
       <img src={photography.photoSrc} alt={photography.photoAlt} />
-      <p>{photography.photoDescription}</p>
+      {showMore && <p>{photography.photoDescription}</p>}
     </div>
   );
 }
@@ -59,3 +66,6 @@ root.render(<App />);
 // hooks are unconditional declarations about your component’s needs
 
 // calling useState means your telling react that your component needs to remember something
+// the only argument you pass to useState is the initializing value of the state variable
+// ...in our case, we initialize state variable index with value 0
+// a component can have as many state variable types & state as you want

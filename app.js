@@ -8,8 +8,16 @@ function Gallery() {
       index = _React$useState2[0],
       setIndex = _React$useState2[1];
 
+  var _React$useState3 = React.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      showMore = _React$useState4[0],
+      setShowMore = _React$useState4[1];
+
   function handleNextimageClick() {
     setIndex(index + 1);
+  }
+  function handleShowDetailsClick() {
+    setShowMore(!showMore);
   }
 
   var photography = photographyList[index];
@@ -41,8 +49,13 @@ function Gallery() {
       " of ",
       photographyList.length
     ),
-    React.createElement("img", { src: photography.photoSrc, alt: photography.photoAlt }),
     React.createElement(
+      "button",
+      { onClick: handleShowDetailsClick },
+      !showMore ? "Show Details" : "Hide Details"
+    ),
+    React.createElement("img", { src: photography.photoSrc, alt: photography.photoAlt }),
+    showMore && React.createElement(
       "p",
       null,
       photography.photoDescription
@@ -85,3 +98,6 @@ root.render(React.createElement(App, null));
 // hooks are unconditional declarations about your component’s needs
 
 // calling useState means your telling react that your component needs to remember something
+// the only argument you pass to useState is the initializing value of the state variable
+// ...in our case, we initialize state variable index with value 0
+// a component can have as many state variable types & state as you want
