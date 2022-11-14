@@ -1,5 +1,7 @@
 # state
 
+![stateR](https://user-images.githubusercontent.com/85868026/201591029-6f9ca053-b524-4723-98df-25cdf3f1d463.png)
+
 In this read, I learnt:
 
 - about the `useState` hook
