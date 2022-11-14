@@ -35,13 +35,13 @@ function Gallery() {
       { className: "buttonsFlex" },
       React.createElement(
         "button",
-        { onClick: handleNextimageClick },
-        "Next Image"
+        { onClick: handlePreviousImageClick },
+        "Previous Image"
       ),
       React.createElement(
         "button",
-        { onClick: handlePreviousImageClick },
-        "Previous Image"
+        { onClick: handleNextimageClick },
+        "Next Image"
       )
     ),
     React.createElement(

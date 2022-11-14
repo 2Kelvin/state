@@ -17,6 +17,15 @@ button {
     cursor: pointer;
     padding: 0.8em;
     border-radius: 8px;
+    color: #222;
+}
+
+button:first-child {
+    background-color: #ffd60a;
+}
+
+button:last-child {
+    background-color: #4cc9f0;
 }
 
 .gallery {

@@ -21,8 +21,8 @@ function Gallery() {
   return (
     <div className="gallery">
       <div className="buttonsFlex">
-        <button onClick={handleNextimageClick}>Next Image</button>
         <button onClick={handlePreviousImageClick}>Previous Image</button>
+        <button onClick={handleNextimageClick}>Next Image</button>
       </div>
       <h2>
         <i>{photography.photoName} </i>by {photography.photographer}
