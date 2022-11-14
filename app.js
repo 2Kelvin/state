@@ -14,7 +14,7 @@ function Gallery() {
       setShowMore = _React$useState4[1];
 
   function handleNextimageClick() {
-    setIndex(index + 1);
+    index == photographyList.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
   function handleShowDetailsClick() {
     setShowMore(!showMore);
