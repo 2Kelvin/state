@@ -1,6 +1,6 @@
 # state
 
-![stateR](https://user-images.githubusercontent.com/85868026/201591029-6f9ca053-b524-4723-98df-25cdf3f1d463.png)
+![stateReact](https://user-images.githubusercontent.com/85868026/201592480-fc456fd9-0eb6-45ab-a0b7-d85d3c8e6191.png)
 
 In this read, I learnt:
 
