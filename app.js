@@ -101,3 +101,11 @@ root.render(React.createElement(App, null));
 // the only argument you pass to useState is the initializing value of the state variable
 // ...in our case, we initialize state variable index with value 0
 // a component can have as many state variable types & state as you want
+// It is a good idea to have multiple state variables if their state is unrelated
+// state is private & local to a component
+// ... i.e. each component stores & updates its state independently/ separately
+// changing one's component state doesn't affect the other component's state
+// a parent component can't change the state of its children component
+// this phenomenon allows you to add or remove state from a component without affecting the other components
+
+// to share state between components, add the state to the components' nearest sharing parent

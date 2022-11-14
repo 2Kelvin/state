@@ -7,3 +7,6 @@ In this read, I learnt:
 - to import the useState hook (from react) at a the top of the file in order to use it in a project
 - that when you use state, you're basically telling React that you want your component to remember something
 - that one component can have as many state variables (state) as you want
+- that state is private to each component. If you render it in two places, each copy gets its own state. i.e. each component stores and updates its state separately from the other components
+
+REMEMBER: We use state when we want our component to remember some information between renders
