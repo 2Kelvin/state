@@ -16,6 +16,11 @@ function Gallery() {
   function handleNextimageClick() {
     index == photographyList.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
+
+  function handlePreviousImageClick() {
+    index == 0 ? setIndex(photographyList.length - 1) : setIndex(index - 1);
+  }
+
   function handleShowDetailsClick() {
     setShowMore(!showMore);
   }
@@ -26,9 +31,18 @@ function Gallery() {
     "div",
     { className: "gallery" },
     React.createElement(
-      "button",
-      { onClick: handleNextimageClick },
-      "Next Image"
+      "div",
+      { className: "buttonsFlex" },
+      React.createElement(
+        "button",
+        { onClick: handleNextimageClick },
+        "Next Image"
+      ),
+      React.createElement(
+        "button",
+        { onClick: handlePreviousImageClick },
+        "Previous Image"
+      )
     ),
     React.createElement(
       "h2",

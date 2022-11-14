@@ -7,6 +7,11 @@ function Gallery() {
   function handleNextimageClick() {
     index == photographyList.length - 1 ? setIndex(0) : setIndex(index + 1);
   }
+
+  function handlePreviousImageClick() {
+    index == 0 ? setIndex(photographyList.length - 1) : setIndex(index - 1);
+  }
+
   function handleShowDetailsClick() {
     setShowMore(!showMore);
   }
@@ -15,7 +20,10 @@ function Gallery() {
 
   return (
     <div className="gallery">
-      <button onClick={handleNextimageClick}>Next Image</button>
+      <div className="buttonsFlex">
+        <button onClick={handleNextimageClick}>Next Image</button>
+        <button onClick={handlePreviousImageClick}>Previous Image</button>
+      </div>
       <h2>
         <i>{photography.photoName} </i>by {photography.photographer}
       </h2>

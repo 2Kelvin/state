@@ -23,3 +23,8 @@ button {
     min-width: 1000px;
     max-width: 1000px
 }
+
+.buttonsFlex {
+    display: flex;
+    justify-content: space-between;
+}
