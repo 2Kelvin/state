@@ -13,12 +13,15 @@ function Gallery() {
       showMore = _React$useState4[0],
       setShowMore = _React$useState4[1];
 
+  var okNext = index < photographyList.length - 1;
+  var okPrevious = index > 0;
+
   function handleNextimageClick() {
-    index == photographyList.length - 1 ? setIndex(0) : setIndex(index + 1);
+    okNext && setIndex(index + 1);
   }
 
   function handlePreviousImageClick() {
-    index == 0 ? setIndex(photographyList.length - 1) : setIndex(index - 1);
+    okPrevious && setIndex(index - 1);
   }
 
   function handleShowDetailsClick() {
@@ -35,12 +38,12 @@ function Gallery() {
       { className: "buttonsFlex" },
       React.createElement(
         "button",
-        { onClick: handlePreviousImageClick },
+        { onClick: handlePreviousImageClick, disabled: !okPrevious },
         "Previous Image"
       ),
       React.createElement(
         "button",
-        { onClick: handleNextimageClick },
+        { onClick: handleNextimageClick, disabled: !okNext },
         "Next Image"
       )
     ),

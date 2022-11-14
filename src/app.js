@@ -4,12 +4,15 @@ function Gallery() {
   const [index, setIndex] = React.useState(0);
   const [showMore, setShowMore] = React.useState(false);
 
+  let okNext = index < photographyList.length - 1;
+  let okPrevious = index > 0;
+
   function handleNextimageClick() {
-    index == photographyList.length - 1 ? setIndex(0) : setIndex(index + 1);
+    okNext && setIndex(index + 1);
   }
 
   function handlePreviousImageClick() {
-    index == 0 ? setIndex(photographyList.length - 1) : setIndex(index - 1);
+    okPrevious && setIndex(index - 1);
   }
 
   function handleShowDetailsClick() {
@@ -21,8 +24,12 @@ function Gallery() {
   return (
     <div className="gallery">
       <div className="buttonsFlex">
-        <button onClick={handlePreviousImageClick}>Previous Image</button>
-        <button onClick={handleNextimageClick}>Next Image</button>
+        <button onClick={handlePreviousImageClick} disabled={!okPrevious}>
+          Previous Image
+        </button>
+        <button onClick={handleNextimageClick} disabled={!okNext}>
+          Next Image
+        </button>
       </div>
       <h2>
         <i>{photography.photoName} </i>by {photography.photographer}

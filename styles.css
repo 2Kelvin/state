@@ -40,6 +40,11 @@ button:last-child:active {
     background-color: #e9d8a6;
 }
 
+button:disabled {
+    opacity: 0.5;
+    background-color: silver;
+}
+
 .gallery {
     min-width: 1000px;
     max-width: 1000px
