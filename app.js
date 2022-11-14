@@ -65,7 +65,7 @@ function Gallery() {
     ),
     React.createElement(
       "button",
-      { onClick: handleShowDetailsClick },
+      { onClick: handleShowDetailsClick, className: "btnShow" },
       !showMore ? "Show Details" : "Hide Details"
     ),
     React.createElement("img", { src: photography.photoSrc, alt: photography.photoAlt }),

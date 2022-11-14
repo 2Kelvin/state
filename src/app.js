@@ -30,7 +30,7 @@ function Gallery() {
       <h3>
         {index + 1} of {photographyList.length}
       </h3>
-      <button onClick={handleShowDetailsClick}>
+      <button onClick={handleShowDetailsClick} className="btnShow">
         {!showMore ? "Show Details" : "Hide Details"}
       </button>
       <img src={photography.photoSrc} alt={photography.photoAlt} />

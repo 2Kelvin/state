@@ -24,8 +24,20 @@ button:first-child {
     background-color: #ffd60a;
 }
 
+button:first-child:active {
+    background-color: #f77f00;
+}
+
 button:last-child {
     background-color: #4cc9f0;
+}
+
+button:last-child:active {
+    background-color: #168aad;
+}
+
+.btnShow {
+    background-color: #e9d8a6;
 }
 
 .gallery {
