@@ -1,6 +1,6 @@
 # state
 
-![stateDog](https://user-images.githubusercontent.com/85868026/201592796-25bd1c7c-4538-4999-8354-b54b6118dbb2.png)
+![stateBtns](https://user-images.githubusercontent.com/85868026/201642766-52e59de2-71ec-48ad-9130-3f77836c1776.png)
 
 In this read, I learnt:
 
